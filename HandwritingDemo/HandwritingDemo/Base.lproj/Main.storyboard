@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HandwritingDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eeO-U7-GCr" customClass="TouchCanvas" customModule="HandwritingDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="597"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvK-Wk-6S3">
+                                <rect key="frame" x="16" y="617" width="343" height="30"/>
+                                <state key="normal" title="Predict"/>
+                                <connections>
+                                    <action selector="predictPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9S4-Wd-wF7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAD-h6-CND">
+                                <rect key="frame" x="367" y="596.5" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eeO-U7-GCr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0XB-nm-XG5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WvK-Wk-6S3" secondAttribute="trailing" constant="16" id="Bok-hp-T1M"/>
+                            <constraint firstItem="eeO-U7-GCr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="C30-U4-pps"/>
+                            <constraint firstItem="WvK-Wk-6S3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Ehs-OU-XDB"/>
+                            <constraint firstItem="WvK-Wk-6S3" firstAttribute="top" secondItem="eeO-U7-GCr" secondAttribute="bottom" constant="20" id="K3f-0c-teF"/>
+                            <constraint firstItem="WvK-Wk-6S3" firstAttribute="top" secondItem="aAD-h6-CND" secondAttribute="bottom" constant="20" id="YCR-H3-qeT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WvK-Wk-6S3" secondAttribute="bottom" constant="20" id="dPQ-Rt-ctZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aAD-h6-CND" secondAttribute="trailing" constant="8" id="gVn-0l-daf"/>
+                            <constraint firstItem="eeO-U7-GCr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="h3T-iq-UQr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="eeO-U7-GCr" id="pjX-Kv-ffK"/>
+                        <outlet property="predictionLabel" destination="aAD-h6-CND" id="v4R-2O-BhK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
